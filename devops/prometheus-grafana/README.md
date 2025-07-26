@@ -22,6 +22,13 @@ Ela está conteinerizada com Docker, possui monitoramento com Prometheus e Grafa
 
 - Docker + Docker Compose
 - Node.js (apenas se rodar localmente sem containers)
+- Criar um arquivo .env com o seguinte conteúdo:
+```bash
+MONGODB_URI=mongodb+srv://api-user:<senha_usuer>@cluster0.fwz4sqy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PORT=3000
+
+```
+A senha pode ser encontrada na categoria 2. Organização de Portfolio.
 
 ### Executando com Docker Compose
 

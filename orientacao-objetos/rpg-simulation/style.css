@@ -1,0 +1,74 @@
+body {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+.buttons {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0e6655;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #16a085;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #0e6655;
+  white-space: pre-wrap;
+  text-align: left;
+  max-width: 600px;
+  margin-inline: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#result h3 {
+  text-align: center;
+  color: #0e6655;
+  margin-top: 20px;
+}
+
+#result strong {
+  color: #154360;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 15px;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #0e6655;
+  color: white;
+}

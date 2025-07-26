@@ -1,0 +1,31 @@
+body {
+  background-color: #111;
+  color: #f39c12;
+  font-family: 'Courier New', monospace;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+input, button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  background-color: #f39c12;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d35400;
+}
+
+#resultado {
+  margin-top: 1rem;
+  line-height: 1.6;
+}

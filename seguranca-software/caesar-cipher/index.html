@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caesar Cipher Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Caesar Cipher Simulator</h1>
+
+  <div class="container">
+    <label for="inputText">Enter your text:</label>
+    <textarea id="inputText" rows="4"></textarea>
+
+    <label for="shift">Shift (key):</label>
+    <input type="number" id="shift" value="3" min="-100" max="100" />
+    <small class="note">
+      Use any integer key. Caesar cipher wraps around every 26 letters.
+      Negative values will decrypt the text.
+    </small>
+
+    <div class="buttons">
+      <button onclick="encrypt()">Encrypt 🔒</button>
+      <button onclick="decrypt()">Decrypt 🔓</button>
+    </div>
+
+    <div class="output">
+      <h3>Result:</h3>
+      <pre id="result"></pre>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

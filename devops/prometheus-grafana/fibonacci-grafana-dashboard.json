@@ -1,0 +1,51 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "fibonacci-api-dashboard",
+    "title": "Fibonacci API Dashboard",
+    "timezone": "browser",
+    "schemaVersion": 30,
+    "version": 1,
+    "refresh": "10s",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "API Request Duration",
+        "targets": [
+          {
+            "expr": "rate(http_request_duration_ms_sum[1m]) / rate(http_request_duration_ms_count[1m])",
+            "legendFormat": "Avg duration (ms)",
+            "refId": "A"
+          }
+        ],
+        "datasource": "Prometheus",
+        "id": 1,
+        "gridPos": {
+          "h": 9,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        }
+      },
+      {
+        "type": "stat",
+        "title": "Total Requests",
+        "targets": [
+          {
+            "expr": "sum(increase(http_request_duration_ms_count[5m]))",
+            "refId": "B"
+          }
+        ],
+        "datasource": "Prometheus",
+        "id": 2,
+        "gridPos": {
+          "h": 6,
+          "w": 6,
+          "x": 0,
+          "y": 9
+        }
+      }
+    ]
+  },
+  "overwrite": true
+}

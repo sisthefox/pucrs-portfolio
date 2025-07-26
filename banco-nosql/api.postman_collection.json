@@ -1,0 +1,106 @@
+{
+  "info": {
+    "name": "REST API - Fibonacci and Tasks (MongoDB)",
+    "_postman_id": "e3f2fca6-24b7-47f1-b8a5-ea0205f3f901",
+    "description": "Postman collection to test the REST API for Fibonacci and Task management using MongoDB.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Fibonacci - GET /api/fibonacci/:n",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/fibonacci/10",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "fibonacci", "10"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks - GET all",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks - POST",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Write project report\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks - PUT (update task)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Task Title\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/6629fae2b8e4f2f76b0f1b66",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks", "6629fae2b8e4f2f76b0f1b66"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Tasks - DELETE (remove task)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/tasks/6629fae2b8e4f2f76b0f1b66",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "tasks", "6629fae2b8e4f2f76b0f1b66"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

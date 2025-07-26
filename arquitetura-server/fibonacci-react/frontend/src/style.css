@@ -1,0 +1,53 @@
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 5rem auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+}
+
+h1 {
+  color: #f39c12;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+  width: 100px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #f39c12;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d35400;
+  color: white;
+}
+
+.result {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+}

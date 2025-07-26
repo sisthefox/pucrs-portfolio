@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sequência de Fibonacci</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Tool</a></li>
+        <li><a href="lateralus.html">Lateralus</a></li>
+        <li><a href="fibonacci.html">Fibonacci</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Sequência de Fibonacci Visual</h1>
+    <p>Do caos à ordem!</p>
+    <p>Clique nos botões para embaralhar ou organizar os números.</p>
+
+    <div class="controls">
+      <button onclick="shuffleNumbers()">🔀 Embaralhar</button>
+      <button onclick="organizeSpiral()">🌀 Organizar em Espiral</button>
+    </div>
+
+    <div id="fibo-container"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Memorial de Programação Web - Josiane Tarasoni</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/fibonacci.js"></script>
+</body>
+</html>

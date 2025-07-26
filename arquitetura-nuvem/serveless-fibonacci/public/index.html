@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fibonacci Serverless (Simulado)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Fibonacci Calculator</h1>
+  <p>Enter a number N to calculate the Fibonacci sequence up to that term:</p>
+
+  <input type="number" id="inputN" placeholder="Enter a number" />
+  <button onclick="calcular()">Calculate</button>
+
+  <div id="result"></div>
+
+  <script>
+    async function calcular() {
+      const n = document.getElementById('inputN').value;
+      const resEl = document.getElementById('result');
+
+      if (!n || n < 0) {
+        resEl.innerHTML = 'Please enter a valid non-negative integer.';
+        return;
+      }
+
+      try {
+        const resp = await fetch(`/api/fibonacci?n=${n}`);
+        const data = await resp.json();
+
+        if (data.error) {
+          resEl.innerHTML = 'Error: ' + data.error;
+        } else {
+          resEl.innerHTML = 'Sequence: ' + data.result.join(', ');
+        }
+      } catch (err) {
+        resEl.innerHTML = 'Error connecting to the function.';
+      }
+    }
+  </script>
+</body>
+</html>

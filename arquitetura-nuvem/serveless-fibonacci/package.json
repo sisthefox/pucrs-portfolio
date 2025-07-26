@@ -1,0 +1,13 @@
+{
+  "name": "serverless-fibonacci",
+  "version": "1.0.0",
+  "description": "Local serverless application to calculate Fibonacci numbers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Josiane Tarasconi",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

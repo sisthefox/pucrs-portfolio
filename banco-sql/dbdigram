@@ -1,0 +1,24 @@
+Table users {
+  id int [pk, increment]
+  name varchar(100)
+  email varchar(100) [unique]
+}
+
+Table tasks {
+  id int [pk, increment]
+  user_id int [ref: > users.id]
+  title varchar(150)
+  completed boolean
+  due_date date
+}
+
+Table tags {
+  id int [pk, increment]
+  name varchar(50) [unique]
+}
+
+Table task_tags {
+  task_id int [ref: > tasks.id]
+  tag_id int [ref: > tags.id]
+  primary key (task_id, tag_id)
+}
